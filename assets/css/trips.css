@@ -1,0 +1,157 @@
+body {
+    background-image: url("https://lifeinthestudio.s3.amazonaws.com/trip-bg.jpg");
+    height: 100%;
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.content {
+    margin-bottom: 94px;
+}
+
+.trip_img .img-fluid {
+    width: 100%;
+    max-height: 360px;
+}
+  
+  .trip_img .trip_title {
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    /* max-width: 120px; */
+    /* width: 100%; */
+    background: #fff;
+    text-align: center;
+    color: #0b1033;
+    padding: 14px 0px 10px 0px;
+  }
+  
+  .trip_img a.title {
+    font-size: 24px;
+    font-family: "Permanent Marker", sans-serif;
+    font-weight: bold;
+    color: #0b1033;
+    padding: 0 18px 5px 12px;
+    padding-bottom: 5px;
+  }
+  
+  .trip_text {
+    padding: 20px 30px 45px 30px;
+    display: inline-block;
+  }
+  
+  .trip_text h4 {
+    font-size: 24px;
+    font-family: "Permanent Marker", sans-serif;
+    font-weight: bold;
+    color: #0b1033;
+    padding-bottom: 5px;
+  }
+
+  .trip_text .trip_title {display: inline-block;}
+
+  .trip_title  a.title {
+    position: relative;
+    text-decoration: none;
+    float: left;
+    text-align:center;
+  }
+
+  .trip_title a.title:before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 32px);
+    height: 2px;
+    bottom: 10px;
+    left: 16px;
+    background-color: black;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 300ms ease-in-out 0s;
+}
+
+.trip_title a.title:hover {text-decoration: none;}
+.trip_title a.title:hover:before {
+    text-decoration: none;
+    visibility: visible;
+    transform: scaleX(1);
+}
+  
+  .trip_text .trip_date {
+    padding-bottom: 10px;
+  }
+  
+  .trip_text p {
+    font-size: 18px;
+    font-family: "Nanum Myeongjo";
+    font-weight: bold;
+    line-height: 28px;
+    color: black;
+  }
+  
+  .trip_text p + p {
+    padding-top: 30px;
+  }
+  
+  .trip_text .more_btn {
+    margin-top: 45px;
+  }
+  
+  .trip_main_item {
+    -webkit-box-shadow: 0px 24px 38px 0px rgba(0, 0, 0, 0.31);
+    box-shadow: 0px 24px 38px 0px rgba(0, 0, 0, 0.31);
+    margin-bottom: 100px;
+    background-color: #fff;
+    position: relative;
+    
+    margin: auto;
+    margin-bottom: 52px;
+    width: 80%;
+
+    animation-name: tripsLoadIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+  }
+  
+  .trip_main_item:last-child {
+    margin-bottom: 0px;
+  }
+
+.trip-buttons a {
+  font-family: 'Helvetica';
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+  background-color: var(--info);
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 15px 20px;
+  transition: all 500ms ease-out;
+}
+
+.trip-buttons a:hover {
+  text-decoration: none;
+  color: white;
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.6);
+}
+
+@keyframes tripsLoadIn {
+    0% {
+        opacity: 0.1;
+        transform: translateY(+50%);
+    }
+    75% {opacity: 0.6;}
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes tripImageLoadIn {
+    0% {max-height: 0;}
+    100% {max-height: 100%;}
+}

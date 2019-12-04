@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login | LifeInTheStudio</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="/assets/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/assets/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Amatic+SC|Great+Vibes|Nanum+Myeongjo|Permanent+Marker&display=swap">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/login.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-50 p-b-90">
+				<form class="login100-form validate-form flex-sb flex-w" id='formElement' action='javascript:login()'>
+					<span style='font-family: "Permanent Marker";font-size: 42px;'class="login100-form-title p-b-51">
+						Welcome Back
+					</span>
+
+					<div id='loginForm'>
+						<div class="wrap-input100 validate-input m-b-16" data-validate = "Email is required">
+							<input class="input100" type="email" name="email" id='email' placeholder="Email">
+							<span class="focus-input100"></span>
+						</div>
+						
+						
+						<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+							<input class="input100" type="password" name="password" id='password' placeholder="Password">
+							<span class="focus-input100"></span>
+						</div>
+
+						<div class="flex-sb-m w-full p-t-3 p-b-24">
+							<div>
+								<a href="javascript:forgotPasswordShow()">
+									Forgot Password?
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-login100-form-btn m-t-17">
+						<button id='submit-btn' class="login100-form-btn">
+							Login
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog" aria-labelledby="Forgot Password Modal" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+		    <div class="modal-content">
+				<div class="modal-header">
+			  	<h5 class="modal-title">Forgot Password?</h5>
+			  	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+			  	</button>
+			</div>
+			<div class="modal-body">
+				<form class="login100-form validate-form flex-sb flex-w" id='forgotPasswordForm' action='javascript:forgotPasswordRequest()'>
+					<span>Enter the email assosiated with your account. If there is an account attached to that email, then a reset link will be sent to you.</span><br>
+					<div class="wrap-input100 validate-input" id='forgotPasswordEmailDiv' data-validate="Email is required">
+						<input class=" form-control" type="email" name="email" id='forgotPasswordEmail' placeholder="Email">
+						<span class="focus-input100"></span>
+					</div>
+				</form>
+				<img id='ajax_loader' class='img-fluid mx-auto' width='50px' src='/assets/images/ajax-loader.gif' alt='Please Wait...'>
+				<div id='forgotPasswordReplyDiv' class='mx-auto' style='display:none;'>
+					<span id='forgotPasswordReplyText' class='mx-auto'></span>
+				</div>
+			</div>
+			<div class="modal-footer">
+			  <button type="submit" id='forgotPasswordSubmitBtn' onclick='forgotPasswordRequest()' class="btn btn-primary">Reset Password</button>
+			</div>
+		  </div>
+		</div>
+	</div>
+
+	<div id="backgroundDiv"></div>
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/vendor/bootstrap/js/popper.js"></script>
+	<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/vendor/daterangepicker/moment.min.js"></script>
+	<script src="/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="/assets/js/login.js"></script>
+	<script src="/assets/js/theme.js"></script>
+	<script src="/assets/js/polygonizr.min.js"></script>
+<!--===============================================================================================-->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88725213-3"></script>
+	<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-88725213-3');</script>
+
+</body>
+</html>

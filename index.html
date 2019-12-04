@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home | LifeInTheStudio</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Great+Vibes|Nanum+Myeongjo|Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88725213-3"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-88725213-3');</script>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src='/assets/js/index.js'></script>
+    <script src='/assets/js/theme.js'></script>
+
+</head>
+<body>
+    <div class='topnav' id='topnav'>
+        <a href='/index.html' class='active'>Home</a>
+        <a href='/announcements.html'>Announcements</a>
+        <a href='/classes.html'>Classes</a>
+        <a href='/trips.html'>Trips</a>
+        <a href='/login.html' id='login_button'>Login</a>
+        <a href='/account.html' id='my_account' style='display:none;'><i class="fa fa-user-circle"></i></a>
+        <a href='javascript:dropMenu()' class='icon'><i class='fa fa-bars'></i></a>
+    </div>
+    <div class='content'>
+        
+    </div>
+    <a href='javascript:openMessagesFrame()' id='message_open_menu'><i class='fa fa-envelope'></i></a>
+    <div id='message_center_main' style='display: none;' onblur='closeMessagesFrame()'>
+        <div id='message_center_frame'>
+                <a href='javascript:closeMessagesFrame()' class='menu_close_btn'>&times;</a>
+            <div id='message_title_frame'>
+                <a href='javascript:backMessages()' class='menu_btn'><</a>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

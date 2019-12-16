@@ -3,7 +3,6 @@
 2. [TODO](#todo)
       1. [Frontend](#frontend)
 3. [MySQL](#mysql)
-   1. [Art Studio](#art-studio)
       1. [Accounts](#accounts)
       2. [Classes](#classes)
       3. [Assignments](#assignments)
@@ -49,19 +48,6 @@
         - [ ] Notification JavaScript functions
 
 # MySQL
-
-## Art Studio
-
-Tables:
-- accounts
-- classes
-- assignments
-- classwork
-- trips
-- trip-rosters
-- tokens
-- message-threads
-- posts
 
 ### Accounts
 | Field           | Data Type   | Attributes |
@@ -139,6 +125,8 @@ Roster JSON:
 ***
 
 ### Trip Roster Template
+*This is used as a template to create a trip roster table*
+
 | Field        | Data Type   | Attributes | Foreign Keys      |
 |--------------|-------------|------------|-------------------|
 | student-id   | VARCHAR(16) | PRIMARY    | `accounts`.`uuid` |

@@ -1,8 +1,7 @@
 # Table of Contents
 1. [Table of Contents](#table-of-contents)
 2. [TODO](#todo)
-      1. [Backend](#backend)
-      2. [Frontend](#frontend)
+      1. [Frontend](#frontend)
 3. [MySQL](#mysql)
    1. [Art Studio](#art-studio)
       1. [Accounts](#accounts)
@@ -10,10 +9,11 @@
       3. [Assignments](#assignments)
       4. [Classwork](#classwork)
       5. [Trips](#trips)
-      6. [Tokens](#tokens)
-      7. [Message Threads](#message-threads)
-      8. [Message Thread Template](#message-thread-template)
-      9. [Attachments](#attachments)
+      6. [Trips Roster Template](#trips-roster-template)
+      7. [Tokens](#tokens)
+      8. [Message Threads](#message-threads)
+      9. [Message Thread Template](#message-thread-template)
+      10. [Attachments](#attachments)
 4. [Misc](#misc)
       1. [Fonts](#fonts)
       2. [Google Tag](#google-tag)
@@ -22,57 +22,14 @@
 
 # TODO
 
-
-### Backend
-    Authorization:
-        - [x] sendPasswordReset()
-        - [x] resetPassword()
-    Student Functions:
-        - [x] inviteStudent()
-        - [ ] addStudent()
-        - [ ] removeStudent()
-        - [x] emailStudent()
-        - [ ] addStudentToClass()
-        - [ ] removeStudentFromClass()
-    Class Functions:
-        - [ ] createClass()
-        - [ ] deleteClass()
-        - [ ] notifyClass()
-        - [ ] modifyClass()
-    Trip Functions:
-        - [ ] planTrip()
-        - [ ] registerForTrip()
-        - [ ] notifyParticipants()
-        - [ ] modifyTrip()
-        - [ ] sendTripInfo()
-        - [ ] getTripInfo()
-        - [ ] sendEmailToTripRoster()
-    AWS Functions:
-        - [x] uploadToS3()
-        - [ ] getReferenceLink()
-        - [x] sendEmail()
-    Messaging:
-        - [ ] getMessages()
-        - [ ] sendMessage()
-        - [ ] createMessageThread()
-        - [ ] deleteMessage()
-        - [ ] checkForNewMessages()
-    Notifications:
-        - [ ] newNotification()
-        - [ ] sendOutNotifications()
-        - [ ] awknowledgeNotification()
-        - [ ] getNotifications()
-        - [ ] checkForNewNotifications()
-
-
 ### Frontend
     Base:
         - [x] Header tabs
-        - [ ] Logos
-        - [ ] Favicon
+        - [x] Logos
+        - [x] Favicon
     Homepage:
         - [ ] Add gallery
-        - [ ] Get background images
+        - [x] Get background images
         - [ ] Create intro page
         - [ ] Message Center
     Contact Us:
@@ -80,13 +37,13 @@
         - [ ] Create JavaScript functions
     Trips:
         - [x] Create brief trip template
-        - [ ] Create register forms
-        - [ ] Create detailed page template
+        - [x] Create register forms
+        ~~- [ ] Create detailed page template-~~
     Authorization Pages:
         - [x] Create login page
         - [x] Create signup page
-        - [ ] Create password reset page
-        - [ ] Create error handle function for all pages
+        - [x] Create password reset page
+        - [x] Create error handle function for all pages
     Accounts:
         - [ ] Account settings page
         - [ ] Notification widget in header
@@ -102,6 +59,7 @@ Tables:
 - assignments
 - classwork
 - trips
+- trip-rosters
 - tokens
 - message-threads
 - posts
@@ -178,6 +136,17 @@ Roster JSON:
 | trip-start-date    | DATE        |               |
 | trip-end-date      | DATE        |               |
 | banner-image       | TEXT        |               |
+
+***
+
+### Trip Roster Template
+| Field        | Data Type   | Attributes | Foreign Keys      |
+|--------------|-------------|------------|-------------------|
+| student-id   | VARCHAR(16) | PRIMARY    | `accounts`.`uuid` |
+| signed-up-at | DATETIME    |            |                   |
+| email        | TEXT        |            |                   |
+| verified     | BOOLEAN     | DEFAULT(0) |                   |
+| has-paid     | BOOLEAN     | DEFAULT(0) |                   |
 
 ***
 

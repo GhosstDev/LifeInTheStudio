@@ -26,7 +26,7 @@ if ($ser->connect_error) {
                         trigger_error("SQL Query Failed: ".$ser->error);
                     }
                 } else {
-                    $emailTemplate = @file_get_contents("/assets/templates/student-invite-email.html", true);
+                    $emailTemplate = @file_get_contents("/bin/email templates/student-invite-email.html", true);
                     if ($emailTemplate === false) {
                         echo "err_email_template_failed_to_read";
                         trigger_error(error_get_last());

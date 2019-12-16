@@ -38,7 +38,6 @@
     Trips:
         - [x] Create brief trip template
         - [x] Create register forms
-        ~~ - [ ] Create detailed page template ~~
     Authorization Pages:
         - [x] Create login page
         - [x] Create signup page

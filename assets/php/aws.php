@@ -1,6 +1,6 @@
 <?php
 
-require 'C:\Users\Brice\Documents\xampp\htdocs\vendor\aws-autoloader.php';
+require '.\..\..\vendor\aws-autoloader.php';
 use Aws\Ses\SesClient;
 use Aws\S3\S3Client;
 use Aws\Exception\AwsException;

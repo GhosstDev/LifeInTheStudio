@@ -9,7 +9,7 @@
       3. [Assignments](#assignments)
       4. [Classwork](#classwork)
       5. [Trips](#trips)
-      6. [Trips Roster Template](#trips-roster-template)
+      6. [Trip Roster Template](#trip-roster-template)
       7. [Tokens](#tokens)
       8. [Message Threads](#message-threads)
       9. [Message Thread Template](#message-thread-template)

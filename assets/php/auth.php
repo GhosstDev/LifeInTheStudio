@@ -101,7 +101,7 @@ if ($ser->connect_errno) {
                     $account_data = $search->fetch_assoc();
                     $uuid = $account_data['uuid'];
                     $email = $account_data['email'];
-                    $email_template = @file_get_contents("C:\Users\Brice\Documents\\xampp\htdocs\assets\\templates\password-reset-email.html");
+                    $email_template = @file_get_contents("/bin/email templates/password-reset-email.html");
                     if ($email_template === false) {
                         echo "err_email_template_failed_to_read";
                         trigger_error(error_get_last()['message']);
